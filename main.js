@@ -12,9 +12,8 @@ global.client = new Client({
 });
 
 client.config = require("./config");
-console.log(client.config.opt.discordPlayer);
 
-global.player = new Player(client, client.config.opt.discordPlayer);
+global.player = new Player(client);
 
 require("./src/loader");
 require("./src/events");

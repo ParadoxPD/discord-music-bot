@@ -1,4 +1,3 @@
-console.log(process.env.BOT_TOKEN);
 module.exports = {
   app: {
     px: "-",
@@ -26,12 +25,5 @@ module.exports = {
     },
     maxVol: 100,
     loopMessage: false,
-    discordPlayer: {
-      leaveOnEnd: false,
-      leaveOnStop: false,
-      leaveOnEmpty: false,
-      leaveOnEmptyCooldown: 864000,
-      bufferingTimeout: 5000,
-    },
   },
 };

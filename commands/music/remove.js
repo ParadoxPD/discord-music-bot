@@ -12,8 +12,9 @@ module.exports = {
         `No music currently playing ${message.author}... try again ? ❌`
       );
     }
-    const index = args[0];
+    const index = args[0] - 1;
     const removedTrack = queue.tracks[index];
+    console.log(removedTrack.title);
     const success = queue.remove(index);
 
     return message.channel.send(

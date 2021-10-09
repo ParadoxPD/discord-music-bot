@@ -12,14 +12,12 @@ module.exports = {
         `No music currently playing ${message.author}... try again ? ❌`
       );
     }
-    const index = args[0];
+    const index = args[0] - 1;
     const jumpedToTrack = queue.tracks[index];
-    const success = queue.jump(index);
-
-    return message.channel.send(
-      success
-        ? `Jumped to ${jumpedToTrack.title} ✅`
-        : `Something went wrong ${message.author}... try again ? ❌`
-    );
+    console.log(jumpedToTrack.title);
+    queue.jump(jumpedToTrack);
+    const success = queue.skip();
+    console.log(success);
+    return message.channel.send(`Jumped to ${jumpedToTrack.title} ✅`);
   },
 };
